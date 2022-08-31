@@ -23,6 +23,12 @@ namespace Lib {
 	}
 
 	std::string filePath1 = "minfil.txt"
+		while (std::getline(openFile, fileContent))
+		{
+			std::cout << "Filecontent: " << fileContent << "\n";
+		}
+		openFile.close();
+	}
 }
 
 
@@ -30,5 +36,6 @@ namespace Lib {
 int main()
 {
 	Lib::Print(123);
-	Lib::WriteToFile(Lib::filePath1);
+	Lib::WriteToFile("minfil.txt");
+	Lib::ReadFromFile();
 }
